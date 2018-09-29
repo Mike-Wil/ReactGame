@@ -8,15 +8,19 @@ const Jumbotron = props => (
   >
     <h1>Clicky Game!</h1>
     <h4>The rules are simple, click all the cards without repeating any!</h4>
-      <div>
-        {props.message}
+    <div class='table'>
+      <ul className='list-unstyled'>
+        <li>
+          <p>{props.message}</p>
+        </li>
+        <li>
+          <p>Current score: {props.count}</p>
+        </li>
+        <li>
+          <p>High Score: {props.bestCount}</p>  
+        </li>
+      </ul>
       </div>
-      <div>
-        Current score: {props.count}
-      </div>
-      <div>
-        High Score: {props.bestCount}
-      </div>      
   </div>
 );
 
