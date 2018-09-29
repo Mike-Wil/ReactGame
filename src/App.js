@@ -49,6 +49,9 @@ class App extends React.Component {
       this.setState({count:0,message:message,wasClicked:[]});
     }
     else {
+      if (this.state.count===0) {
+        this.setState({message: "Keep it up!"});
+      }
       this.state.wasClicked.push(event.target.getAttribute('id'));
       this.setState({count: this.state.count+1});
       this.shuffle();
