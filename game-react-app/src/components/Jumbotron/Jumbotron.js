@@ -1,11 +1,22 @@
 import React from "react";
-
-const Jumbotron = ({ children }) => (
+import "./Jumbotron.css";
+const Jumbotron = props => (
   <div
-    style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
+    style={{clear: "both", paddingTop: 10, paddingBottom: 10, textAlign: "center", backgroundColor: "#C0D890"
+  }}
     className="jumbotron"
   >
-    {children}
+    <h1>Clicky Game!</h1>
+    <h4>The rules are simple, click all the cards without repeating any!</h4>
+      <div>
+        {props.message}
+      </div>
+      <div>
+        Current score: {props.count}
+      </div>
+      <div>
+        High Score: {props.bestCount}
+      </div>      
   </div>
 );
 

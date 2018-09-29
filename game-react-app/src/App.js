@@ -1,4 +1,5 @@
 import React from "react";
+import Jumbotron from "./components/Jumbotron";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import friends from "./friends.json";
@@ -56,23 +57,25 @@ class App extends React.Component {
   }
   render() {
     return (
-      // <Jumbotron>
-      //         <h1>Test</h1>
-      //       </Jumbotron>
-  <Wrapper>
-  
-    <h1 className="title">Friends List</h1>
-    {this.state.imgs.map(friend => (
+      <Wrapper>
+      <Jumbotron
+      count={this.state.count}
+      bestCount={this.state.bestCount}
+      message={this.state.message}
+      >
+      </Jumbotron>
+      <Wrapper>
+        {this.state.imgs.map(friend => (
           <FriendCard
           {...friend}
           key={friend.id}
           onClick={this.handleClick}
         />
-    ))}
+        ))}
+      </Wrapper>
+      </Wrapper>
 
-
-  </Wrapper>
-  );
+    );
   }
 }
 

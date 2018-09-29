@@ -8,4 +8,9 @@
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
+  width: auto;
+}
+
+.wrapper >.wrapper {
+  width: 80%;
 }
